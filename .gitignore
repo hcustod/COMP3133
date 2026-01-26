@@ -1,0 +1,130 @@
+##################################
+# Node / Package Managers
+##################################
+
+# Ignore node_modules everywhere
+node_modules/
+**/node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+**/.pnpm-store/
+
+##################################
+# Environment / Secrets
+##################################
+.env
+.env.*
+*.env
+**/.env
+**/.env.*
+
+##################################
+# Build / Dist / Output
+##################################
+dist/
+build/
+out/
+**/dist/
+**/build/
+**/out/
+
+##################################
+# Coverage / Test Reports
+##################################
+coverage/
+.nyc_output/
+**/coverage/
+**/.nyc_output/
+
+##################################
+# OS Junk
+##################################
+.DS_Store
+**/.DS_Store
+Thumbs.db
+desktop.ini
+
+##################################
+# VS Code
+##################################
+.vscode/
+**/.vscode/
+
+# Allow shared settings (optional)
+!.vscode/settings.json
+!.vscode/extensions.json
+
+##################################
+# JetBrains / IntelliJ / WebStorm
+##################################
+.idea/
+**/.idea/
+*.iml
+**/*.iml
+
+##################################
+# Eclipse
+##################################
+.project
+.classpath
+.settings/
+**/.settings/
+
+##################################
+# NetBeans
+##################################
+nbproject/
+**/nbproject/
+
+##################################
+# Vim / Emacs / Editor Temp
+##################################
+*.swp
+*.swo
+*~
+*.bak
+.#*
+
+##################################
+# Caches
+##################################
+.cache/
+**/.cache/
+.parcel-cache/
+**/.parcel-cache/
+.eslintcache
+.stylelintcache
+
+##################################
+# Local DB / Sessions / Cookies
+##################################
+cookies.txt
+**/cookies.txt
+sessions/
+**/sessions/
+*.session
+*.sqlite
+*.sqlite3
+local.db
+
+##################################
+# Misc
+##################################
+*.pid
+*.seed
+*.pid.lock
+*.tgz
+*.tar.gz
+*.zip
+
+##################################
+# TypeScript / Source Maps
+##################################
+*.js.map
+**/*.js.map
+
