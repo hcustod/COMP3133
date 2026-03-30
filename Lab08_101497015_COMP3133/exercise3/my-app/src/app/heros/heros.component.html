@@ -1,0 +1,56 @@
+<main class="page-shell">
+  <section class="hero-page">
+    <header class="hero-header">
+      <p class="hero-kicker">COMP3133 Lab 08</p>
+      <h1>Tour of Heroes</h1>
+      <p class="hero-copy">
+        Select a hero from the roster to display the details and edit the name with two-way binding.
+      </p>
+    </header>
+
+    <div class="hero-grid">
+      <section class="panel list-panel">
+        <h2>My Heroes</h2>
+
+        <ul class="hero-list">
+          <li *ngFor="let hero of heros">
+            <button
+              type="button"
+              class="hero-button"
+              [class.selected]="hero === selectedHero"
+              (click)="onSelect(hero)"
+            >
+              <span class="hero-id">{{ hero.id }}</span>
+              <span class="hero-name">{{ hero.name | removeSpaces }}</span>
+            </button>
+          </li>
+        </ul>
+      </section>
+
+      <section class="panel format-panel">
+        <h2>Format Test Input</h2>
+        <p class="format-hint">
+          Type lowercase or mixed case text, then click away to convert it to uppercase.
+        </p>
+
+        <label for="format-test-input">Format Test Input</label>
+        <input
+          id="format-test-input"
+          class="format-test-input"
+          appInputFormat
+          placeholder="Type here and click outside"
+        />
+      </section>
+
+      <section *ngIf="selectedHero as hero" class="panel details-panel">
+        <h2>{{ (hero.name | removeSpaces | uppercase) }} Details</h2>
+
+        <p class="detail-row"><span>Id:</span> {{ hero.id }}</p>
+        <p class="detail-row"><span>Name:</span> {{ hero.name | removeSpaces }}</p>
+
+        <label for="hero-name">Hero name</label>
+        <input id="hero-name" [(ngModel)]="hero.name" placeholder="Enter hero name" />
+      </section>
+    </div>
+  </section>
+</main>
